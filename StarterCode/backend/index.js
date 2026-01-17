@@ -8,7 +8,15 @@ app.use(express.json());
 
 //implement the CORS config
 const cors = require('cors');
-app.use(cors());
+
+const corsOptions = {
+  origin: 'http://localhost:3000', 
+  methods: ['GET', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true 
+};
+
+app.use(cors(corsOptions));
 
 //products array
 let products = [

@@ -31,13 +31,13 @@ const ProductList = () => {
     }
   };
 
-  if (loading) {
-    return <Container><Typography>Loading...</Typography></Container>;
-  }
-
   useEffect(() => {
     fetchProducts();
   }, []);
+
+  if (loading) {
+    return <Container><Typography>Loading...</Typography></Container>;
+  }
 
   return (
     <Container maxWidth="lg" sx={{ py: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '100vh'
