@@ -58,14 +58,6 @@ This application consists of a **Backend** (Express.js) and **Frontend** (React)
 
 4. **Keep this terminal window open** - the backend server must continue running.
 
-**⚠️ Troubleshooting Backend:**
-- **Port 5000 already in use error?**
-  - Find and kill the process using port 5000:
-    ```bash
-    lsof -ti:5000 | xargs kill -9
-    ```
-  - Then try starting the server again
-
 ---
 
 ### Step 3: Launch the Frontend Application
